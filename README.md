@@ -30,7 +30,7 @@ async function main(){
 }
 main()
 ```
-Before executing the above code make sure to configure your validation file and your error template file accordingly, see more about this in the [settings](##settings) topic
+Before executing the above code make sure to configure your validation file and your error template file accordingly, see more about this in the [settings](#settings) topic
 
 ## Settings
 By default Detayls will look for the “templates.json” file for the error templates and “validators.js” for the validation file at the root of the project.
@@ -121,7 +121,7 @@ module.exports = {
 ```
 In the code above we are validating a name, and the rule for validation is: A name is only valid if it is at least 3 characters long.
 
-It is important to pay attention to a detail: when we want to tell the validator that certain data is invalid, we use the "done" function, passing as parameter the error code declared in our [error templates file](##templates_de_erro). To tell the validator that the data is valid, you do not need to pass any value but if you prefer you can pass the value "null".
+It is important to pay attention to a detail: when we want to tell the validator that certain data is invalid, we use the "done" function, passing as parameter the error code declared in our [error templates file](#error-templates). To tell the validator that the data is valid, you do not need to pass any value but if you prefer you can pass the value "null".
 
 If you are using Typescript, you can import the "Done" interface from the Detayls module to add the typing.
 
@@ -148,7 +148,7 @@ As stated earlier, this instance will manage the error templates and perform val
 - isValid
 
 #### validate
-The "validate" method will add a validation to the execution queue. It receives as a first parameter a string with the name of the validator function (yes, those we declared in [validation file](###validators)), the second parameter is the data to be validated, the third and last parameter is optional and it must be an options object to customize some attributes of the error object if the given data is invalid.
+The "validate" method will add a validation to the execution queue. It receives as a first parameter a string with the name of the validator function (yes, those we declared in [validation file](#validators)), the second parameter is the data to be validated, the third and last parameter is optional and it must be an options object to customize some attributes of the error object if the given data is invalid.
 
 example:
 
@@ -208,7 +208,7 @@ Since the "run" method returns a promise, if the validation process fails, an in
 
 #### push
 
-The "push" method will manually add an error to the Detayls instance. This method takes two parameters, the first must be the error code that was declared in the [templates file](#templates) and the second argument is optional and must be an object with attributes to customize the final error.
+The "push" method will manually add an error to the Detayls instance. This method takes two parameters, the first must be the error code that was declared in the [templates file](#error-templates) and the second argument is optional and must be an object with attributes to customize the final error.
 
 ```js
 const { Detayls } = require("detayls")
@@ -371,7 +371,7 @@ Example:
 | 3000 ~ 3099 |             Authentication errors             |
 | 4000 ~ 4099 |               Permission errors               |
 
-example taken from our list of templates, [available for you to use in your projects here]().
+example taken from our list of templates, [available for you to use in your projects here](https://github.com/Gabrieljsilva/detayls/tree/main/templates).
 
 ### Do not create validators to validate too much data at once
 It is interesting that you validate the smallest possible data units. A great example is to create a validator for each data in a form and not a validator to validate entire forms.
@@ -407,7 +407,7 @@ module.exports = {
 ```
 
 ## Example with Express
-In this example we will create an application with express and Detayls using Typescript.
+In this example we will create an application with express and Detayls.
 
 install the dependencies:
 ```npm install express detayls"```
