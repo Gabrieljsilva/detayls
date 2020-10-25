@@ -30,15 +30,15 @@ async function main(){
 }
 main()
 ```
-Before executing the above code make sure to configure your validation file and your error template file accordingly, see more about this in the [settings](#settings) topic
+Before executing the above code make sure to configure your validators file and your error template file accordingly, see more about this in the [settings](#settings) topic
 
 ## Settings
-By default Detayls will look for the “templates.json” file for the error templates and “validators.js” for the validation file at the root of the project.
+By default Detayls will look for the “templates.json” file for the error templates and “validators.js” for the validators file at the root of the project.
 It is possible to customize the directory, name and extension of these files, for that, create a file called “detayls.config.json” or “detayls.config.js” or “detayls.config.ts” and export the following variables:
 
 |      name      |  type  |      default     |                 description                 |
 |:--------------:|:------:|:----------------:|:-------------------------------------------:|
-| validatorsPath | string |  ./validators.js |          Validation file location           |
+| validatorsPath | string |  ./validators.js |          Validators file location           |
 |  templatesPath | string | ./templates.json |        error templates file location        |
 
 
@@ -105,7 +105,7 @@ Each validator receives two mandatory parameters:
 - The information to be validated;
 - A function to indicate the end of the validation process;
 
-example of a validation file:
+example of a validators file:
 
 ```validators.js```
 
@@ -148,7 +148,7 @@ As stated earlier, this instance will manage the error templates and perform val
 - isValid
 
 #### validate
-The "validate" method will add a validation to the execution queue. It receives as a first parameter a string with the name of the validator function (yes, those we declared in [validation file](#validators)), the second parameter is the data to be validated, the third and last parameter is optional and it must be an options object to customize some attributes of the error object if the given data is invalid.
+The "validate" method will add a validation to the execution queue. It receives as a first parameter a string with the name of the validator function (yes, those we declared in [validators file](#validators)), the second parameter is the data to be validated, the third and last parameter is optional and it must be an options object to customize some attributes of the error object if the given data is invalid.
 
 example:
 
