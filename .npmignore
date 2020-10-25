@@ -1,0 +1,9 @@
+__tests__/
+.vscode/
+src/
+.eslintrc.json
+.gitignore
+.prettierrc.json
+jest.config.js
+rollup.config.js
+tsconfig.json

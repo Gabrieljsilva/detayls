@@ -1,0 +1,113 @@
+{
+    "default": {
+      "code": "9000",
+      "title": "INTERNAL SERVER ERROR",
+      "details": "there was an internal server error, in which it was not possible to identify it, you can try to contact the responsible technical team to solve the problem.",
+      "reference": "https://your-domain.com/api/reference/errors/9000"
+    },
+    "templates": [
+      {
+        "code": "1000",
+        "title": "INVALID DATA",
+        "details": "this error usually happens when the client tries to send invalid information to the server. In this context, the validation process also takes place internally, without the use of external services to carry out information validation.",
+        "reference": "https://your-domain.com/api/reference/errors/1000"
+      },
+      {
+        "code": "1001",
+        "title": "DATA IS MISSING",
+        "details": "this error usually occurs when the client makes a request but does not send the necessary parameters to complete it.",
+        "reference": "https://your-domain.com/api/reference/errors/1001"
+      },
+      {
+        "code": "1002",
+        "title": "CONFLICT KEYS",
+        "details": "this error usually occurs when the client sends two or more resources that generated a conflict when processing the request.",
+        "reference": "https://your-domain.com/api/reference/errors/1002"
+      },
+      {
+        "code": "1100",
+        "title": "INVALID MEDIA TYPE",
+        "details": "this error usually occurs when the client tries to send or request media that is not accepted by the server.",
+        "reference": "https://your-domain.com/api/reference/errors/1100"
+      },
+      {
+        "code": "1101",
+        "title": "CANNOT IDENTIFY MEDIA TYPE",
+        "details": "this error usually occurs when the client tries to send or request a media in which the server was unable to identify its type, normally this error can be solved by passing the mime type in the request header",
+        "reference": "https://your-domain.com/api/reference/errors/1101"
+      },
+      {
+        "code": "1102",
+        "title": "INVALID MEDIA",
+        "details": "this error usually occurs when the client sends a media and the server has successfully identified its type, however it was invalidated by some internal business rule. Example: the client sent an image with a dimension of 100x100 pixels, however the server accepts only images above 200x200 pixels.",
+        "reference": "https://your-domain.com/api/reference/errors/1102"
+      },
+      {
+        "code": "1103",
+        "title": "CANNOT PROCESS MEDIA",
+        "details": "this error usually occurs when the client sends a media, which has been identified and accepted by the server, but it was not possible to process it because, possibly, it is corrupted.",
+        "reference": "https://your-domain.com/api/reference/errors/1103"
+      },
+      {
+        "code": "1200",
+        "title": "EXTERNAL VALIDATION FAILED",
+        "details": "this error occurs when the client tries to send information that needs to be validated by an external service, but the validation process has failed. It is recommended to contact the technical team to try to solve the problem.",
+        "reference": "https://your-domain.com/api/reference/errors/1201"
+      },
+      {
+        "code": "2000",
+        "title": "ROUTE NOT FOUND",
+        "details": "this error usually occurs when the client makes a request for a non-existent route",
+        "reference": "https://your-domain.com/api/reference/errors/2000"
+      },
+      {
+        "code": "2100",
+        "title": "RESOURCE NOT FOUND",
+        "details": "this error usually occurs when the client requests a resource that could not be found by the server",
+        "reference": "https://your-domain.com/api/reference/errors/2100"
+      },
+      {
+        "code": "2101",
+        "title": "RESOURCE ALREADY EXISTS",
+        "details": "this error usually occurs when the user tries to create a resource that already exists or that must have attributes that cannot be duplicated.",
+        "reference": "https://your-domain.com/api/reference/errors/2101"
+      },
+      {
+        "code": "2102",
+        "title": "IT'S NOT POSSIBLE TO UPDATE THE RESOURCE",
+        "details": "this error usually occurs when the user tries to change information about a resource, but it was not possible due to a business rule",
+        "reference": "https://your-domain.com/api/reference/errors/2102"
+      },
+      {
+        "code": "2103",
+        "title": "IT'S NOT POSSIBLE TO DELETE THE RESOURCE",
+        "details": "this error usually occurs when the user tries to delete a resource, but it was not possible due to a business rule",
+        "reference": "https://your-domain.com/api/reference/errors/2103"
+      },
+      {
+        "code": "3000",
+        "title": "CREDENTIALS DON'T MATCH",
+        "details": "this error usually occurs when the client sends valid credentials, but the combination of the data does not match.",
+        "reference": "https://your-domain.com/api/reference/errors/3000"
+      },
+      {
+        "code": "3001",
+        "title": "TOKEN NOT PROVIDED",
+        "details": "this error usually occurs when the client tries to make a protected request, but does not enter the authentication token",
+        "reference": "https://your-domain.com/api/reference/errors/3001"
+      },
+      {
+        "code": "3002",
+        "title": "INVALID AUTHENTICATION TOKEN",
+        "details": "this error usually occurs when the client tries to make a protected request, but does not enter the authentication token",
+        "reference": "https://your-domain.com/api/reference/errors/3002"
+      },
+      {
+        "code": "4000",
+        "title": "ACCESS DENIED",
+        "details": "this error usually occurs when the user is authenticated, but is not allowed to access the requested resource",
+        "reference": "https://your-domain.com/api/reference/errors/4000"
+      }
+    ]
+  }
+  

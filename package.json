@@ -1,0 +1,35 @@
+{
+  "name": "detayls",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "repository": "https://github.com/gabrieljsilva/detayls",
+  "author": "Gabriel Silva <https://github.com/gabrieljsilva>",
+  "scripts": {
+    "test": "jest",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.14",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "rollup": "^2.28.2",
+    "rollup-plugin-dts": "^1.4.13",
+    "rollup-plugin-typescript2": "^0.27.3",
+    "ts-jest": "^26.4.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  }
+}
